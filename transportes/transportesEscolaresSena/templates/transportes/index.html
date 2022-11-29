@@ -1,0 +1,32 @@
+{%extends "transportes/base.html"%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes Escolares</title>
+    <link href="{% static 'transportes/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+      {%block contenedor%}
+
+      <a class="" href="{% url 'transportes:login' %}">Iniciar sesion</a>
+      {% if request.session.logueo %}
+        sesion iniciada
+        {{request.session.logueo}}
+        <br>
+      {% else %}
+        sesion cerrada
+      {% endif %}
+     
+
+
+
+
+      
+      {%endblock%}
+
+</body>
+</html>
